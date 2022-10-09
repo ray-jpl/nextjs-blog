@@ -4,8 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Your Name';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'Raymond Li';
+export const siteTitle = 'Raymond Li';
 
 export default function Layout({ 
   children, 
@@ -14,12 +14,12 @@ export default function Layout({
     home?: boolean 
   }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Raymond Li's Personal Website"
         />
         <meta
           property="og:image"
@@ -30,7 +30,25 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      
+
       <header className={styles.header}>
+        <nav className={styles.navbar}>
+          <div>
+            <Link href="/">{siteTitle}</Link>
+          </div>
+
+          <div className={`${styles.navbarCentre}`}>
+            <Link href="/" className='{}'>Projects</Link>
+            <Link href="/">Blog</Link>
+            <Link href="/">Contact</Link>
+          </div>
+
+          <div>
+            <p>Themes</p>
+          </div>
+        </nav>
+        
         {home ? (
           <>
             <Image
@@ -65,14 +83,15 @@ export default function Layout({
           </>
         )}
       </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+
+      <div className={styles.container}>
+        <main >{children}</main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">← Back to home</Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

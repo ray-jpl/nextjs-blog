@@ -8,6 +8,15 @@ body {
   font-size: 18px;
 }
 
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff, #b9bef0);
+}
+
 * {
   box-sizing: border-box;
 }
