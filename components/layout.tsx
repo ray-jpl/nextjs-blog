@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Raymond Li';
+const name = "Hi, I'm Raymond";
 export const siteTitle = 'Raymond Li';
 
 export default function Layout({ 
@@ -38,15 +38,12 @@ export default function Layout({
             <Link href="/">{siteTitle}</Link>
           </div>
 
-          <div className={`${styles.navbarCentre}`}>
-            <Link href="/" className='{}'>Projects</Link>
-            <Link href="/">Blog</Link>
-            <Link href="/">Contact</Link>
+          <div className={`${styles.navbarMain}`}>
+            <Link href="/"><a className={styles.navBtn}>Projects</a></Link>
+            <Link href="/blog"><a className={styles.navBtn}>Blog</a></Link>
+            <Link href="/"><a className={styles.navBtn}>Contact</a></Link>
           </div>
 
-          <div>
-            <p>Themes</p>
-          </div>
         </nav>
         
         {home ? (

@@ -15,14 +15,33 @@
 }
 
 .navbar {
+    /* navbar seperate from container in case i want to change it later on */
+    max-width: 48rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 1rem 3rem;
 }
 
-.navbarCentre {
+.navBtn {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent
+}
+
+.navBtn:hover {
+    color: black;
+    background-color: #f7f7f7;
+}
+
+.navBtn:active {
+    border: 2px solid #989898;
+}
+
+.navbarMain {
+    width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
 }
