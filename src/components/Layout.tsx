@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = "Hi, I'm Raymond";
@@ -14,7 +12,7 @@ export default function Layout({
     home?: boolean 
   }) {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,19 +29,17 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-
-      <header className={styles.header}>
-        <nav className={styles.navbar}>
-          <div>
-            <Link href="/">{siteTitle}</Link>
+      <header className="w-screen mb-5 flex flex-col items-center">
+        <nav className="w-1/2 my-2 flex flex-row justify-between">
+          <div className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">
+            <Link href="/" >{siteTitle}</Link>
           </div>
 
-          <div className={`${styles.navbarMain}`}>
-            <Link href="/"><a className={styles.navBtn}>Projects</a></Link>
-            <Link href="/blog"><a className={styles.navBtn}>Blog</a></Link>
-            <Link href="/"><a className={styles.navBtn}>Contact</a></Link>
+          <div className="w-1/3 flex justify-between margin-0">
+            <Link href="/projects"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Projects</a></Link>
+            <Link href="/blog"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Blog</a></Link>
+            <Link href="/"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Contact</a></Link>
           </div>
-
         </nav>
         
         {home ? (
@@ -51,12 +47,12 @@ export default function Layout({
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="mt-5 text-5xl font-bold tracking-tight">{name}</h1>
           </>
         ) : (
           <>
@@ -65,26 +61,26 @@ export default function Layout({
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className="rounded-full"
                   height={108}
                   width={108}
                   alt=""
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className="text-3xl font-bold">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className="text-inherit">{name}</a>
               </Link>
             </h2>
           </>
         )}
       </header>
 
-      <div className={styles.container}>
+      <div className="w-1/2">
         <main >{children}</main>
         {!home && (
-          <div className={styles.backToHome}>
+          <div className="mt-12 hover:underline">
             <Link href="/">← Back to home</Link>
           </div>
         )}
