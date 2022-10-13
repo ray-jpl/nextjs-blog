@@ -30,7 +30,7 @@ export default function Layout({
       </Head>
       
       <header className="w-screen mb-5 flex flex-col items-center">
-        <nav className="w-1/2 my-2 flex flex-row justify-between">
+        <nav className="w-2/5 my-2 flex flex-row justify-between">
           <div className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">
             <Link href="/" >{siteTitle}</Link>
           </div>
@@ -77,7 +77,7 @@ export default function Layout({
         )}
       </header>
 
-      <div className="w-1/2">
+      <div className="w-2/5">
         <main >{children}</main>
         {!home && (
           <div className="mt-12 hover:underline">
