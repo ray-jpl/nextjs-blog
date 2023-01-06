@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-fill-base: #0A014F;
+    --color-text-base: #CD9FCC;
+    --color-text-base-1: #E4C2C6;
+    --color-text-base-2: #F6CACA;
+    --base-text-base-3: #FAE8EB;
+  }
+}

@@ -6,7 +6,7 @@ export default function Age() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            let curAge:number = (new Date().getTime() - new Date("2001-11-25").getTime()) / (1000 * 60 * 60 *24 * 365.25)
+            const curAge:number = (new Date().getTime() - new Date("2001-11-25").getTime()) / (1000 * 60 * 60 *24 * 365.25)
             setAge(curAge.toString().substring(0,13))
         }, 50);
         return () => {

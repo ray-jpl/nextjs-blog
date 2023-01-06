@@ -31,14 +31,14 @@ export default function Layout({
       
       <header className="w-screen mb-5 flex flex-col items-center">
         <nav className="w-2/5 my-2 flex flex-row justify-between">
-          <div className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">
-            <Link href="/" >{siteTitle}</Link>
+          <div className="p-2 mx-1 rounded-lg hover:text-black hover:bg-[#f7f7f7] text-xl font-bold">
+            <Link href="/">{siteTitle}</Link>
           </div>
 
           <div className="w-1/3 flex justify-between margin-0">
-            <Link href="/projects"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Projects</a></Link>
-            <Link href="/blog"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Blog</a></Link>
-            <Link href="/"><a className="p-2 mx-1 rounded hover:text-black hover:bg-[#f7f7f7]">Contact</a></Link>
+            <Link href="/projects"><a className="p-2 mx-1 rounded-lg hover:text-black hover:bg-[#f7f7f7]">Projects</a></Link>
+            <Link href="/blog"><a className="p-2 mx-1 rounded-lg hover:text-black hover:bg-[#f7f7f7]">Blog</a></Link>
+            <Link href="/"><a className="p-2 mx-1 rounded-lg hover:text-black hover:bg-[#f7f7f7]">Contact</a></Link>
           </div>
         </nav>
         
@@ -55,25 +55,7 @@ export default function Layout({
             <h1 className="mt-5 text-5xl font-bold tracking-tight">{name}</h1>
           </>
         ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className="rounded-full"
-                  height={108}
-                  width={108}
-                  alt=""
-                />
-              </a>
-            </Link>
-            <h2 className="text-3xl font-bold">
-              <Link href="/">
-                <a className="text-inherit">{name}</a>
-              </Link>
-            </h2>
-          </>
+          <></>
         )}
       </header>
 

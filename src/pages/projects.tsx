@@ -10,12 +10,7 @@ const Projects: React.FC = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-
       <ProjectView></ProjectView>
-
-      
-
     </Layout>
   );
 }
