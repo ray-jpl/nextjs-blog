@@ -4,10 +4,16 @@
 
 @layer base {
   :root {
-    --color-fill-base: #0A014F;
-    --color-text-base: #CD9FCC;
-    --color-text-base-1: #E4C2C6;
-    --color-text-base-2: #F6CACA;
-    --base-text-base-3: #FAE8EB;
+    --color-bg-fill: #FFFFFF;
+    --color-text-primary: #000000;
+    --color-text-muted: #f7f7f7; 
+    --color-text-inverted: #FFFFFF;
+  }
+
+  .theme-midnight {
+    --color-bg-fill: #0A014F;
+    --color-text-primary: #CD9FCC;
+    --color-text-muted: #E4C2C6; 
+    --color-text-inverted: #FFFFFF;
   }
 }
