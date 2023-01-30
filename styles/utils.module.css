@@ -50,19 +50,3 @@
 .lightText {
     color: #666;
 }
-
-
-.iconLink {
-    display: flex;
-    align-items: center;
-}
-
-.icon {
-    height: 1.5rem;
-    padding: 0.15rem;
-    filter: invert(0.5);
-}
-
-.icon:hover {
-    filter: none;
-}
