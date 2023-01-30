@@ -5,13 +5,15 @@
 @layer base {
   :root {
     --color-bg-fill: #FFFFFF;
+    --color-bg-fill-muted: #FFFFFF;
     --color-text-primary: #000000;
     --color-text-muted: #f7f7f7; 
     --color-text-inverted: #FFFFFF;
   }
 
   .theme-midnight {
-    --color-bg-fill: #0A014F;
+    --color-bg-fill: #1a1a1b;
+    --color-bg-fill-muted: #272729;
     --color-text-primary: #CD9FCC;
     --color-text-muted: #E4C2C6; 
     --color-text-inverted: #FFFFFF;

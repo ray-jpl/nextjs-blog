@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 import Layout, { siteTitle } from '../components/Layout';
-import ProjectView from '../components/ProjectView';
 
 
 const Projects: React.FC = () => {
@@ -10,7 +9,10 @@ const Projects: React.FC = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <ProjectView></ProjectView>
+      <section>
+        <h1 className="text-3xl font-bold">Featured Projects</h1>
+        <p>This is a Work In Progress! Check back Later!</p>
+      </section>
     </Layout>
   );
 }
