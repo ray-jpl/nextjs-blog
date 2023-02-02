@@ -3,21 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *:before,
+  html.theme-transition *:after {
+    transition: all 0.1s !important;
+    transition-delay: 0 !important;
+  }
+
   :root {
-    --color-bg-fill: #FFFFFF;
-    --color-bg-fill-muted: #FFFFFF;
-    --color-text-primary: #000000;
+    --color-bg-fill: #FFFBF2;
+    --color-bg-fill-muted: #EEEDE7;
+    --color-text-primary: #3B3B3B;
     --color-text-accent: #000000;
-    --color-text-muted: #f7f7f7; 
+    --color-text-muted: #B9B7BD; 
     --color-text-inverted: #FFFFFF;
   }
 
   html[data-theme='default'] {
-    --color-bg-fill: #FFFFFF;
-    --color-bg-fill-muted: #FFFFFF;
-    --color-text-primary: #000000;
+    --color-bg-fill: #FFFBF2;
+    --color-bg-fill-muted: #EEEDE7;
+    --color-text-primary: #3B3B3B;
     --color-text-accent: #000000;
-    --color-text-muted: #f7f7f7; 
+    --color-text-muted: #B9B7BD; 
     --color-text-inverted: #FFFFFF;
   }
 

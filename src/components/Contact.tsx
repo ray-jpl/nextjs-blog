@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
       <section id="contact" className="w-full mb-10">
         <h1 className="text-3xl font-bold text-center text-skin-accent">Contact Me!</h1>
         
-        <div className="p-6 mt-3 flex bg-skin-fillDark rounded">
+        <div className="p-6 mt-3 flex bg-skin-fillDark rounded shadow-md">
           <form className="w-4/6 flex flex-col" action="">
             {/* <label className="text-xl font-bold" htmlFor="name">Name</label>
             <input name="name" type="text" placeholder='Name'/>
