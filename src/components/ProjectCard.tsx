@@ -24,12 +24,12 @@ function Projects({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
             <p className="text-skin-primary text-base mb-4">{desc}</p>
             <div className="flex flex-col items-center">
               <Link href={siteURL}>
-                <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-fillDark">
+                <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
                   Site
                 </div>
               </Link>
               <Link href={gitURL}>
-                <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-fillDark">
+                <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
                   GitHub
                 </div>
               </Link>
