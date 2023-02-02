@@ -33,7 +33,7 @@ export default function Layout({
         <header className="w-full mb-5 flex flex-col items-center">
           <Navbar/>
           {home ? (
-              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight">{name}</h1>
+              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight text-skin-accent">{name}</h1>
           ) : (
             <></>
           )}

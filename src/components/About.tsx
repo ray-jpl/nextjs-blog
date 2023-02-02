@@ -4,7 +4,7 @@ import Age from './age'
 const About: React.FC = () => {
     return (
       <section id="about" className="mb-10">
-        <h1 className="text-3xl font-bold text-center">About</h1>
+        <h1 className="text-3xl font-bold text-center text-skin-accent">About</h1>
 
         <p className="text-lg">
           I am a <Age></Age> year old Computer Science student at UNSW in Sydney, Australia.<br />
