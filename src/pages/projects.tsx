@@ -1,7 +1,8 @@
 import Head from 'next/head';
-
+import ProjectCard from '../components/ProjectCard';
 import Layout, { siteTitle } from '../components/Layout';
 
+import rayLogo from '../../public/ray.png'
 
 const Projects: React.FC = () => {
   return (
@@ -9,9 +10,17 @@ const Projects: React.FC = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <h1 className="text-3xl font-bold">Featured Projects</h1>
-        <p>This is a Work In Progress! Check back Later!</p>
+      <section className="flex flex-col items-center">
+        <h1 className="text-3xl font-bold mb-10">Featured Projects</h1>
+
+        <ProjectCard
+          title="ray-li.com"
+          img={rayLogo}
+          alt="ray-li logo"
+          desc="My personal website built with React, Tailwind CSS and Typescript"
+          siteURL="https://ray-li.vercel.app/"
+          gitURL="https://github.com/ray-jpl/ray-li.com"
+        />
       </section>
     </Layout>
   );
