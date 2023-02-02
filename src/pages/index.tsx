@@ -4,8 +4,6 @@ import Layout, { siteTitle } from '../components/Layout';
 
 import About from '../components/About';
 import Contact from '../components/Contact';
-import Projects from '../components/ProjectView';
-
 
 export default function Home() {
   return (
@@ -15,9 +13,7 @@ export default function Home() {
       </Head>
 
       <About></About>
-      {/* <Projects></Projects> */}
-      <Contact></Contact>
-      
+      <Contact></Contact> 
 
     </Layout>
   );
