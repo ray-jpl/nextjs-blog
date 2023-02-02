@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Navbar from './Navbar';
 
 const name = "Hi, I'm Raymond";
 export const siteTitle = 'Raymond Li';
@@ -29,21 +30,10 @@ export default function Layout({
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
             
-        <header className="w-screen mb-5 flex flex-col items-center">
-          <nav className="w-2/5 my-2 flex flex-row justify-between">
-            <div className="p-2 mx-1 rounded-lg hover:bg-skin-muted text-xl font-bold">
-              <Link href="/">{siteTitle}</Link>
-            </div>
-
-            <div className="w-1/3 flex justify-between margin-0">
-              <Link href="/projects"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Projects</a></Link>
-              <Link href="/blog"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Blog</a></Link>
-              <Link href="/#contact"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Contact</a></Link>
-            </div>
-          </nav>
-          
+        <header className="w-full mb-5 flex flex-col items-center">
+          <Navbar/>
           {home ? (
-              <h1 className="mt-5 text-5xl font-black tracking-tight">{name}</h1>
+              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight">{name}</h1>
           ) : (
             <></>
           )}
