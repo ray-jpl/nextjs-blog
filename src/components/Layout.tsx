@@ -42,7 +42,7 @@ export default function Layout({
         <div className="w-2/5">
           <main >{children}</main>
           {!home && (
-            <div className="mt-12 hover:underline">
+            <div className="mt-12 mb-6 hover:underline">
               <Link href="/">← Back to home</Link>
             </div>
           )}
