@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Contact: React.FC = () => {
     return (
-      <section className="w-full mb-10">
+      <section id="contact" className="w-full mb-10">
         <h1 className="text-3xl font-bold">Contact Me!</h1>
         
         <div className="p-6 mt-3 flex bg-skin-fillDark rounded">

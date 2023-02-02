@@ -3,7 +3,7 @@ import Age from './age'
 
 const About: React.FC = () => {
     return (
-      <section className="mb-10">
+      <section id="about" className="mb-10">
         <h1 className="text-3xl font-bold">About</h1>
 
         <p className="text-lg">

@@ -38,7 +38,7 @@ export default function Layout({
             <div className="w-1/3 flex justify-between margin-0">
               <Link href="/projects"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Projects</a></Link>
               <Link href="/blog"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Blog</a></Link>
-              <Link href="/"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Contact</a></Link>
+              <Link href="/#contact"><a className="p-2 mx-1 rounded-lg hover:bg-skin-muted">Contact</a></Link>
             </div>
           </nav>
           
