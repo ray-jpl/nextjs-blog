@@ -12,7 +12,7 @@ export default function Layout({
     home?: boolean 
   }) {
   return (
-    <div className='theme-midnight smooth-scroll'>
+    <div className='smooth-scroll'>
       <div className="flex flex-col items-center bg-skin-fill text-skin-primary min-h-screen">
         <Head>
           <link rel="icon" href="/ray.png" />
