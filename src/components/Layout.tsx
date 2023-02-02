@@ -13,7 +13,7 @@ export default function Layout({
   }) {
   return (
     <div className='smooth-scroll'>
-      <div className="flex flex-col items-center bg-skin-fill text-skin-primary min-h-screen">
+      <div className="flex flex-col items-center bg-skin-fill text-skin-primary min-h-screen w-full">
         <Head>
           <link rel="icon" href="/ray.png" />
           <meta
@@ -22,9 +22,7 @@ export default function Layout({
           />
           <meta
             property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle,
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            content="/ray.png"
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
@@ -33,13 +31,13 @@ export default function Layout({
         <header className="w-full mb-5 flex flex-col items-center">
           <Navbar/>
           {home ? (
-              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight text-skin-accent">{name}</h1>
+              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight text-skin-accent text-center p-6">{name}</h1>
           ) : (
             <></>
           )}
         </header>
 
-        <div className="w-2/5">
+        <div className="p-6 w-full md:w-4/5 xl:w-2/5">
           <main >{children}</main>
           {!home && (
             <div className="mt-12 mb-6 hover:underline">
