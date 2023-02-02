@@ -4,6 +4,7 @@ import Layout, { siteTitle } from '../components/Layout';
 
 import About from '../components/About';
 import Contact from '../components/Contact';
+import FeaturedProjects from '../components/FeaturedProjects';
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
 
-      <About></About>
-      <Contact></Contact> 
+      <About/>
+      <FeaturedProjects/>
+      <Contact/> 
 
     </Layout>
   );

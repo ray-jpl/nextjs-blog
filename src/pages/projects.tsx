@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
         <title>{siteTitle}</title>
       </Head>
       <section className="flex flex-col items-center">
-        <h1 className="text-3xl font-bold mb-10 text-skin-accent">Featured Projects</h1>
+        <h1 className="text-3xl font-bold mb-10 text-skin-accent">Projects</h1>
 
         <ProjectCard
           title="ray-li.com"
