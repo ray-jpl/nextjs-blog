@@ -11,7 +11,26 @@
     --color-text-inverted: #FFFFFF;
   }
 
+  .theme-BW {
+    --color-bg-fill: #1a1a1b;
+    --color-bg-fill-muted: #272729;
+    --color-text-primary: #FFFFFF;
+    --color-text-accent: #FFFFFF;
+    --color-text-muted: #1a1a1b; 
+    --color-text-inverted: #FFFFFF;
+    
+  }
+
   .theme-midnight {
+    --color-bg-fill: #1a1a1b;
+    --color-bg-fill-muted: #272729;
+    --color-text-primary: #FFFFFF;
+    --color-text-accent: #CD9FCC;
+    --color-text-muted: #E4C2C6; 
+    --color-text-inverted: #FFFFFF;
+  }
+
+  .theme-midnight-old {
     --color-bg-fill: #1a1a1b;
     --color-bg-fill-muted: #272729;
     --color-text-primary: #CD9FCC;
