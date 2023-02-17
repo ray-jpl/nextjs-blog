@@ -5,9 +5,12 @@ import rayLogo from '../../public/ray.png'
 
 const FeaturedProjects: React.FC = () => {
   return (
-    <section className="flex flex-col items-center mb-10">
-      <h1 className="text-3xl font-bold text-skin-accent mb-2">Featured Projects</h1>
-
+    <section className="flex flex-col items-center mb-14">
+      <div className="flex flex-col items-center mb-5 w-fit">
+          <h1 className="text-3xl font-bold text-center text-skin-title">Featured Projects</h1>
+          <div className="w-4/5 h-1 border rounded-xl border-skin-accent bg-skin-accent"></div>
+      </div>  
+      
       <ProjectCard
         title="ray-li.com"
         img={rayLogo}

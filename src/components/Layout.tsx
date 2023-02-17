@@ -28,17 +28,17 @@ export default function Layout({
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
             
-        <header className="w-full mb-5 flex flex-col items-center">
+        <header className="w-full md:mb-5 flex flex-col items-center">
           <Navbar/>
           {home ? (
-              <h1 className="mt-5 mb-10 text-5xl font-black tracking-tight text-skin-accent text-center p-6">{name}</h1>
+              <h1 className="mt-5 mb-5 md:mb-10 text-5xl font-black tracking-tight text-skin-accent text-center p-6">{name}</h1>
           ) : (
             <></>
           )}
         </header>
 
-        <div className="p-6 w-full md:w-4/5 xl:w-2/5">
-          <main >{children}</main>
+        <div className="p-6 w-full sm:w-4/5 md:w-1/2 2xl:max-w-7xl">
+          <main>{children}</main>
           {!home && (
             <div className="mt-12 mb-6 hover:underline">
               <Link href="/">← Back to home</Link>

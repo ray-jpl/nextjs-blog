@@ -11,12 +11,12 @@ interface ProjectProps {
   gitURL: string;
 }
 
-function Projects({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
+function ProjectCard({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
     return (
       
-      <div className="bg-skin-fillDark rounded-2xl shadow-xl max-w-sm">
+      <div className="bg-skin-fillDark rounded-2xl shadow-xl max-w-sm border-4 border-skin-accent overflow-hidden transition ease-in-out scale-100 hover:scale-105 duration-300">
         <Link href={siteURL}>
-          <Image className="cursor-pointer aspect-square object-scale-down rounded-t-2xl" src={img} alt={alt} />
+          <Image className="cursor-pointer aspect-square object-scale-down" src={img} alt={alt} />
         </Link>
         
         <div className="p-6">
@@ -40,4 +40,4 @@ function Projects({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
     )
 }
 
-export default Projects
+export default ProjectCard
