@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
           <div className="w-4/5 h-1 border rounded-xl border-skin-accent bg-skin-accent"></div>
         </div>
         
-        <div className="p-6 flex flex-col sm:flex-row bg-skin-fillDark border-4 border-skin-accent rounded-md shadow-md">
+        <div className="p-6 flex flex-col sm:flex-row bg-skin-fillDark border-4 border-skin-accent rounded-2xl shadow-md">
           <form className="w-full sm:w-4/6 flex flex-col" action="">
             <p className="text-lg">
               Do you want to work with me or want to ask questions about my projects?
