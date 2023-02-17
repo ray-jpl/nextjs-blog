@@ -12,19 +12,21 @@
   }
 
   :root {
-    --color-bg-fill: #FFFBF2;
-    --color-bg-fill-muted: #EEEDE7;
+    --color-bg-fill: #FFFFFF;
+    --color-bg-fill-muted: #f5f5f5;
     --color-text-primary: #3B3B3B;
-    --color-text-accent: #000000;
+    --color-text-title: #000000;
+    --color-text-accent: #e28d8e;
     --color-text-muted: #B9B7BD; 
     --color-text-inverted: #FFFFFF;
   }
 
   html[data-theme='default'] {
-    --color-bg-fill: #FFFBF2;
-    --color-bg-fill-muted: #EEEDE7;
+    --color-bg-fill: #FFFFFF;
+    --color-bg-fill-muted: #f5f5f5;
     --color-text-primary: #3B3B3B;
-    --color-text-accent: #000000;
+    --color-text-title: #000000;
+    --color-text-accent: #e28d8e;
     --color-text-muted: #B9B7BD; 
     --color-text-inverted: #FFFFFF;
   }
@@ -33,6 +35,7 @@
     --color-bg-fill: #1a1a1b;
     --color-bg-fill-muted: #272729;
     --color-text-primary: #FFFFFF;
+    --color-text-title: #FFFFFF;
     --color-text-accent: #FFFFFF;
     --color-text-muted: #1a1a1b; 
     --color-text-inverted: #1a1a1b;
@@ -52,6 +55,7 @@
     --color-bg-fill: #1a1a1b;
     --color-bg-fill-muted: #272729;
     --color-text-primary: #FFFFFF;
+    --color-text-title: #FFFFFF;
     --color-text-accent: #CD9FCC;
     --color-text-muted: #E4C2C6; 
     --color-text-inverted: #1a1a1b;
