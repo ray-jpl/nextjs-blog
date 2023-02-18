@@ -8,9 +8,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function transitionTheme(theme: string) {
+function transitionTheme(theme: string, dark: boolean) {
   document.documentElement.classList.add('theme-transition')
   document.documentElement.setAttribute('data-theme', theme)
+  if (dark && !document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.add('dark')
+  } else if (!dark) {
+    document.documentElement.classList.remove('dark')
+  }
+
   window.setTimeout(function() {
     document.documentElement.classList.remove('theme-transition')
   }, 1000)
@@ -125,7 +131,7 @@ const Navbar: React.FC = () => {
                         active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
                         'block px-4 py-2 text-sm w-full text-left'
                       )}
-                      onClick={() => {transitionTheme('default')}}
+                      onClick={() => {transitionTheme('default', false)}}
                     >
                       Default
                     </button>
@@ -138,7 +144,7 @@ const Navbar: React.FC = () => {
                         active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
                         'block px-4 py-2 text-sm w-full text-left'
                       )}
-                      onClick={() => {transitionTheme('BW')}}
+                      onClick={() => {transitionTheme('BW', true)}}
                     >
                       Black & White
                     </button>
@@ -151,7 +157,7 @@ const Navbar: React.FC = () => {
                         active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
                         'block px-4 py-2 text-sm w-full text-left'
                       )}
-                      onClick={() => {transitionTheme('dusk')}}
+                      onClick={() => {transitionTheme('dusk', true)}}
                     >
                       Dusk
                     </button>
