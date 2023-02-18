@@ -2,32 +2,36 @@ import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-export default function Post({
-  postData
-}: {
-  postData: {
-    title: string
-    date: string
-    contentHtml: string
-  }
-}) {
+import React, { Fragment, useMemo } from 'react'
+
+import { getMDXComponent } from 'mdx-bundler/client';
+
+export default function Post({ postData }) {
+    let { code, frontmatter } = postData.props
+    const PostContent = useMemo(() => {
+    if (!code) return Fragment
+    return getMDXComponent(code)
+  }, [code]);
+  
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{frontmatter.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+      <article className='prose dark:prose-invert max-w-full'>
+        
+        <h1 className="text-4xl leading-8 sm:leading-5 font-bold my-4 tracking-tighter">{frontmatter.title}</h1>
+        <div className="text-[#666]">
+          <Date dateString={frontmatter.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <section className='mt-10'>
+          <PostContent />
+        </section>
       </article>
     </Layout>
-  )
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
