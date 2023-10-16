@@ -13,9 +13,8 @@ interface ProjectProps {
 
 function ProjectCard({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
     return (
-      
       <div className="bg-skin-fillDark rounded-2xl shadow-xl max-w-sm border-4 border-skin-accent overflow-hidden transition ease-in-out scale-100 hover:scale-105 duration-300">
-        <Link href={siteURL}>
+        <Link href={siteURL} legacyBehavior>
           <Image className="cursor-pointer aspect-square object-scale-down" src={img} alt={alt} />
         </Link>
         
@@ -23,12 +22,12 @@ function ProjectCard({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
           <h5 className="text-skin-accent text-xl font-medium mb-2">{title}</h5>
             <p className="text-skin-primary text-base mb-4">{desc}</p>
             <div className="flex flex-col items-center">
-              <Link href={siteURL}>
+              <Link href={siteURL} legacyBehavior>
                 <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
                   Site
                 </div>
               </Link>
-              <Link href={gitURL}>
+              <Link href={gitURL} legacyBehavior>
                 <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
                   GitHub
                 </div>
@@ -37,7 +36,7 @@ function ProjectCard({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
         </div>
         
       </div>
-    )
+    );
 }
 
 export default ProjectCard

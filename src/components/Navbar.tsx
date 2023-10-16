@@ -48,40 +48,40 @@ const Navbar: React.FC = () => {
               <div className="py-1">
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href='/projects'>
-                      <a 
-                        className={classNames(
-                          active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
-                          'block px-4 py-2 text-sm')}
-                      >
+                    <Link
+                      href='/projects'
+                      className={classNames(
+                        active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
+                        'block px-4 py-2 text-sm')}>
+                      
                         Projects
-                      </a>
+                      
                     </Link>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href='/blog'>
-                      <a 
-                        className={classNames(
-                          active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
-                          'block px-4 py-2 text-sm')}
-                      >
+                    <Link
+                      href='/blog'
+                      className={classNames(
+                        active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
+                        'block px-4 py-2 text-sm')}>
+                      
                         Blog
-                      </a>
+                      
                     </Link>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href='/#contact'>
-                      <a 
-                        className={classNames(
-                          active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
-                          'block px-4 py-2 text-sm')}
-                      >
+                    <Link
+                      href='/#contact'
+                      className={classNames(
+                        active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
+                        'block px-4 py-2 text-sm')}>
+                      
                         Contact
-                      </a>
+                      
                     </Link>
                   )}
                 </Menu.Item>
@@ -91,14 +91,20 @@ const Navbar: React.FC = () => {
         </Menu>
 
         <div className="p-2 mx-1 w-fit rounded-lg hover:bg-skin-fillDark text-xl font-bold hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
-          <Link href="/"><div className="transition ease-in-out scale-100 hover:scale-105 duration-300">{siteTitle}</div></Link>
+          <Link href="/" legacyBehavior><div className="transition ease-in-out scale-100 hover:scale-105 duration-300">{siteTitle}</div></Link>
         </div>
       </div>  
 
       <div className="hidden sm:flex margin-0 w-60 justify-center">
-        <Link href="/projects"><a className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Projects</a></Link>
-        <Link href="/blog"><a className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Blog</a></Link>
-        <Link href="/#contact"><a className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Contact</a></Link>
+        <Link
+          href="/projects"
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Projects</Link>
+        <Link
+          href="/blog"
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Blog</Link>
+        <Link
+          href="/#contact"
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Contact</Link>
       </div>
 
       <div className="w-60 flex justify-end">
@@ -170,8 +176,7 @@ const Navbar: React.FC = () => {
       </div>
 
     </nav>
-
-  )
+  );
 }
 
 export default Navbar

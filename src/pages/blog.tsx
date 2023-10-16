@@ -35,7 +35,7 @@ export default function Blog({
             {allPostsData.map(({ id, date, title }) => (
               <li className="m-0 mb-5" key={id}>
                 <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
+                  {title}
                 </Link>
                 <br />
                 <small className="text-[#666]">
