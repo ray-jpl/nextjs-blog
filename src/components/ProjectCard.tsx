@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 
 interface ProjectProps {
   title: string;
