@@ -1,6 +1,5 @@
-import React from "react";
-import Link from 'next/link';
 import Image, { StaticImageData } from "next/legacy/image";
+import Link from 'next/link';
 
 interface ProjectProps {
   title: string;
@@ -22,11 +21,6 @@ function ProjectCard({title, img, alt, desc, siteURL, gitURL}: ProjectProps) {
           <h5 className="text-skin-accent text-xl font-medium mb-2">{title}</h5>
             <p className="text-skin-primary text-base mb-4">{desc}</p>
             <div className="flex flex-col items-center">
-              <Link href={siteURL} legacyBehavior>
-                <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
-                  Site
-                </div>
-              </Link>
               <Link href={gitURL} legacyBehavior>
                 <div className="p-0.5 m-1 w-full text-center rounded-full border-2 border-skin-primary hover:bg-skin-primary hover:text-skin-inverted">
                   GitHub
