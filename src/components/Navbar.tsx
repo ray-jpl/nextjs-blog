@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
 import Link from 'next/link';
+import React, { Fragment } from "react";
 import { siteTitle } from "./Layout";
 
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, Transition } from '@headlessui/react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -98,13 +98,15 @@ const Navbar: React.FC = () => {
       <div className="hidden sm:flex margin-0 w-60 justify-center">
         <Link
           href="/projects"
-          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Projects</Link>
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
+            Projects
+        </Link>
+        
         <Link
           href="/blog"
-          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Blog</Link>
-        <Link
-          href="/#contact"
-          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">Contact</Link>
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
+            Blog
+        </Link>
       </div>
 
       <div className="w-60 flex justify-end">
