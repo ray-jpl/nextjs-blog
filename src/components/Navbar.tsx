@@ -97,11 +97,15 @@ const Navbar: React.FC = () => {
 
       <div className="hidden sm:flex margin-0 w-60 justify-center">
         <Link
+          href="/"
+          className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
+            Home
+        </Link>
+        <Link
           href="/projects"
           className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
             Projects
         </Link>
-        
         <Link
           href="/blog"
           className="p-2 mx-1 rounded-lg hover:bg-skin-fillDark hover:text-skin-accent transition-transform ease-in-out scale-100 hover:scale-105 duration-300">
