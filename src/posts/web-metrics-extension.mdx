@@ -13,9 +13,11 @@ Initially I wanted to implement the basic functionality of Digital wellbeing.
 - A dashboard to view all websites visited and time spent on them
 - A way to set a time limit on a per site basis and to block access to the site once that time limit is reached.
 
-After looking at some other extensions involved with blocking, I wanted to add even more features. 
 #### Data Persistence
-One thing I really wanted to add was data persistence. This way you can see the trend of your overall and site usage over weeks and months. The problem with this was I would probably need to store data outside of chrome if I needed to keep track of data for months. Apart from the potential data privacy issues I would need to find a way to read/write this data. The chrome storage API is a key value store, I thought it would be easy to transfer the data in this format to a key value store like Cloudflare Workers KV. Cloudflare KV has a generous free tier plan of 100,000 reads and 1,000 writes per day which was perfect. If we only need to write once at the end of the day then we could support up to 1,000 daily active users. The data for the last 7 days can probably be cached with the chrome storage API as there is a 10MB limit for local storage. If a user wanted to look at their data for the previous week or beyond then they could send a request to Cloudflare KV. An alternative I considered was a MongoDB database since key value stores should be easy to integrate into a NoSQL database. MongoDB also has a free tier that is not bad.  
+One thing I really wanted to add was data persistence. This way you can see the trend of your overall and site usage over weeks and months. The problem with this was I would probably need to store data outside of Chrome if I needed to keep track of data for months. Apart from the potential data privacy issues I would need to find a way to read/write this data. 
+
+
+The Chrome storage API is a key value store, I thought it would be easy to transfer the data in this format to a key value store like Cloudflare Workers KV. Cloudflare KV has a generous free tier plan of 100,000 reads and 1,000 writes per day which was perfect. If we only need to write once at the end of the day then we could support up to 1,000 daily active users. The data for the last 7 days can probably be cached with the Chrome storage API as there is a 10MB limit for local storage. If a user wanted to look at their data for the previous week or beyond then they could send a request to Cloudflare KV. An alternative I considered was a MongoDB database since key value stores should be easy to integrate into a NoSQL database. MongoDB also has a free tier that is not bad.  
 
 Data persistence would also allow for cross platform syncing in the future between desktop and mobile. Storing data usage patterns can also be useful in the future to provide insights. Maybe showing the cumulative hours spent on YouTube might just shock you into using it a lot less.
 
@@ -32,25 +34,14 @@ Another alternative is a popular open source framework called [Plasmo](https://d
 If you want to use ChatGPT just keep in mind to specify Manifest V3 in the prompts. The responses would often default to V2 which is now deprecated, resulting in ChatGPT referencing deprecated functions in its answers. Even after specifying Manifest V3 it would hallucinate methods that have never existed in either V2 or V3 relatively often. 
 
 ## Cult of Done
-I never really planned to publish my extension. I never thought I would have all the features I wanted ready, or have a UI that I'd be proud to share. I'm not a person who is good at design which makes designing the UI feel more like a chore and unenjoyable. There are so many things to consider such as:
-- Typography
-- Visual Hierarchy
-- Color Scheme
-- Navigation
-- Accessibility
-- Mobile Responsiveness and more.... 
+I never really planned to publish my extension. I never thought I would have all the features I wanted ready, or have a UI that I'd be proud to share. Design has never been my string suit but it is one of the things I'll need to continue practicing over time. In the process I did find some useful resources such as [Realtime Colors](https://www.realtimecolors.com/) and [Laws of UX](https://lawsofux.com/) which some may find helpful. 
 
-I don't think I executed all of these principles but design is one of the things I'll need to continue practicing over time. In the process I did find some useful resources such as [Realtime Colors](https://www.realtimecolors.com/) and [Laws of UX](https://lawsofux.com/) which some may find helpful. 
-
-I got the basic functionality working to a point which was acceptable for my daily use. There are still a few bugs I'd like to address but don't really impact the functionality of the extension. There is a few common ones I'd like to mention in case anyone reading this encounters them. 
-- Sometimes if the PC is on standby or if youre really unlucky then the time will not reset at midnight.
-  - I think this is due to the slight inconsistencies of the setInterval method. The data is wiped at around the same time when the tracked time gets updated. The update fires after the wipe which just rewrites the old values.
-  - I think the fix for this is simple. Clear the interval before wiping the data, then set a new interval after the data is wiped. 
+I got the basic functionality working to a point which was acceptable for my daily use. There are still a few bugs I'd like to address but don't really impact the functionality of the extension.
 - Sometimes the extension constantly partially loads the page then refreshes the page when it should be blocked
   - When the extension is blocked the network requests should be getting blocked to prevent any content from being loaded. Some sites like Youtube seem to consistently get stuck in this loop.
   - Haven't fully investigated the cause for this but a workaround could be to just replace the content of the webpage with a blocked message when time is up.
 
-If I'm being _totally honest_, I just ran out of motivation to fix the issues or invest more time into creating a UI that I would be completely happy with. Realistically, even though its published, I am probably the only person using this as I have not advertised it or marketed it anywhere. It was just a fun project to work on that I would use and something cool I could show some friends. In its current form it satisfys what I need it to do and nothing more.   
+If I'm being _totally honest_, I was just running out of motivation to fix small issues or invest more time into UI design. Realistically, even though its published, I am probably the only person using this as I have not advertised it or marketed it anywhere. It was just a fun project to work on that I would use and something cool I could show some friends. In its current form it satisfys what I need it to do and nothing more.   
 
 This video called the [Cult of Done](https://www.youtube.com/watch?v=bJQj1uKtnus) summarised how I was feeling after working on it for a couple of weeks and helped me push myself to just publish it. I may revisit it in the future when inspiration strikes but otherwise I'm done with it.
 
