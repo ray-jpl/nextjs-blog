@@ -27,8 +27,8 @@ const Projects: React.FC = () => {
           >
             <p className='mb-4'>This website you're on right now!</p>
             <ul className='list-disc space-y-2 pl-6'>
-              <li>Set site usage limits to restrict time spent on certain sites</li>
-              <li>Made with Nextjs and Typescript</li>
+              <li>Portfolio website for my projects and ramblings</li>
+              <li>Made with Nextjs, Tailwind CSS and Typescript</li>
             </ul>
           </ProjectCard>
           <ProjectCard
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
             </ul>
           </ProjectCard>
           <ProjectCard
-            title="My personal Wiki"
+            title="My Personal Wiki"
             img={quartzLogo}
             alt="Quartz Logo"
             siteURL="https://rayjpl-wiki.pages.dev/"
