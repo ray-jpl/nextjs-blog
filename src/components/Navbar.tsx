@@ -72,19 +72,6 @@ const Navbar: React.FC = () => {
                     </Link>
                   )}
                 </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link
-                      href='/#contact'
-                      className={classNames(
-                        active ? 'bg-skin-primary text-skin-inverted' : 'text-skin-primary',
-                        'block px-4 py-2 text-sm')}>
-                      
-                        Contact
-                      
-                    </Link>
-                  )}
-                </Menu.Item>
               </div>
             </Menu.Items>
           </Transition>
